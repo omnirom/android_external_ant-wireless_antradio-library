@@ -14,6 +14,7 @@
 # limitations under the License.
 #
 
+ifneq ($(TARGET_USES_PREBUILT_ANT),true)
 ifneq ($(BOARD_ANT_WIRELESS_DEVICE),)
 LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
@@ -31,3 +32,4 @@ LOCAL_MODULE:= com.dsi.ant.antradio_library
 include $(BUILD_JAVA_LIBRARY)
 
 endif # BOARD_ANT_WIRELESS_DEVICE defined
+endif
